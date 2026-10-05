@@ -10,10 +10,10 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           java-version: '11'
-          distribution: 'adopt'
+          distribution: 'temurin'
       - name: Права на gradlew
         run: chmod +x gradlew
       - name: Запуск сервиса в фоне
         run: java -jar ./artifacts/app-card-delivery.jar &
       - name: Запуск тестов
-        run: ./gradlew test --info
+        run: ./gradlew test --info -Dselenide.headless=true
