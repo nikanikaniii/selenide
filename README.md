@@ -1,0 +1,1 @@
+![Build](https://github.com/nikanikaniii/selenide/actions/workflows/build.yml/badge.svg)
